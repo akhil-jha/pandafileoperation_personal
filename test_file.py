@@ -16,15 +16,17 @@ dataFrame = dataFrame.replace(["-99999","-88"],"Offline") # replacing value(s) x
 # To replace in specific column, pass a dictionary inplace of list[]
 
 
-groupbyDataFrame = dataFrame.groupby("Item Type")
-for groupbyElement,groupbyElementDataFrame in groupbyDataFrame:                           # \
-    print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")      #   \
-    print(groupbyElement)                                                                 #     'Group By' in dataframes. Printing all the grouped dataframe
-    print("---------")                                                                    #   /
-    print(groupbyElementDataFrame)                                                        #  /
+# groupbyDataFrame = dataFrame.groupby("Item Type")
+# for groupbyElement,groupbyElementDataFrame in groupbyDataFrame:                           # \
+#     print("\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")      #   \
+#     print(groupbyElement)                                                                 #     'Group By' in dataframes. Printing all the grouped dataframe
+#     print("---------")                                                                    #   /
+#     print(groupbyElementDataFrame)                                                        #  /
                                                                                           #/
 # print(groupbyDataFrame.get_group("Baby Food")) ## Get a particular group dataframe      #
+
+
 # print(dataFrame) #printing the dataFrame
 
 
-
+print(dataFrame.pivot(index="Order ID", columns="Sales Channel"))
