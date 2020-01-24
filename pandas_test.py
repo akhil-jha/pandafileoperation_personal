@@ -1,4 +1,4 @@
-__author__ = 'Akhil Jha, Apoorva Jagtap and Arpit Jain'
+__author__ = 'Akhil Jha'
 
 import pandas
 
